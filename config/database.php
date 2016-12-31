@@ -70,7 +70,7 @@ return [
             'driver' => 'mysql',
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE_TEST', 'forge'),
+            'database' => env('DB_DATABASE_TEST', 'wikired_db_tests'),
             'username' => env('MYSQL_USERNAME', env('DB_USERNAME', 'forge')),
             'password' => env('MYSQL_PASSWORD', env('DB_PASSWORD', 'forge')),
             'charset' => 'utf8',
