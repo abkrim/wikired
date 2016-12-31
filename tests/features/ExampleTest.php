@@ -8,7 +8,7 @@ class ExampleTest extends FeatureTestCase
 {
     //use DatabaseMigrations;
     // Ya esta en la clase extendida
-    // use DatabaseTransactions;  // usa transacciones por lo que alfinal del test no se ejecuta contenido
+    use DatabaseTransactions;  // usa transacciones por lo que alfinal del test no se ejecuta contenido
     /**
      * A basic functional test example.
      *
@@ -26,7 +26,7 @@ class ExampleTest extends FeatureTestCase
 
         $this->actingAs($user, 'api')
              ->visit('api/user')
-             ->see($name);
-             //->see($email);
+             ->see($name)
+             ->see($email);
     }
 }
