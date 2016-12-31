@@ -1,7 +1,5 @@
 <?php
 
-use Illuminate\Foundation\Testing\WithoutMiddleware;
-use Illuminate\Foundation\Testing\DatabaseMigrations;
 use Illuminate\Foundation\Testing\DatabaseTransactions;
 
 class ExampleTest extends FeatureTestCase
@@ -11,10 +9,10 @@ class ExampleTest extends FeatureTestCase
     use DatabaseTransactions;  // usa transacciones por lo que alfinal del test no se ejecuta contenido
     /**
      * A basic functional test example.
-     *
+     * @test
      * @return void
      */
-    function test_basic_example()
+    function basic_example()
     {
         $name   = 'AbdelKarim Mateos';
         $email  = 'abdelkarim@tamainut.com';
