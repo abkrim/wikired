@@ -68,7 +68,7 @@ return [
 
         'mysql_tests' => [
             'driver' => 'mysql',
-            'host' => env('DB_HOST', '127.0.0.1'),
+            'host' => env('DB_HOST', 'localhost'),
             'port' => env('DB_PORT', '3306'),
             'database' => env('DB_DATABASE_TEST', 'wikired_db_tests'),
             'username' => env('MYSQL_USERNAME', env('DB_USERNAME', 'forge')),
@@ -84,7 +84,7 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Migration Repository Table
+    | Migration Repository Table 2
     |--------------------------------------------------------------------------
     |
     | This table keeps track of all the migrations that have already run for
