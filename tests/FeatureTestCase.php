@@ -1,17 +1,24 @@
 <?php
 
 use Illuminate\Foundation\Testing\DatabaseTransactions;
-/**
- * Este fichero es parte de Cprsync.
- *
- * @version 3.0.1
- * @link https://tamainut.com/
- * @autor AbdelKarim Mateos
- * @copyright Copyright (C) 2016 Abdelkarim Mateos. All rights reserved.
- * @license Comercial license
- * @package \\\
- */
+
 class FeatureTestCase extends TestCase
 {
     use DatabaseTransactions;
+
+    public function  seeErrors(array $fields)
+    {
+        foreach ($fields as $name => $errors)
+        {
+            foreach ((array) $errors as $message)
+            {
+                //$this->seeInElement('#field_title.has-error .help-block', 'El campo título es obligatorio')
+                $this->seeInElement(
+                    "#field_{$name}.has-error .help-block", $message
+                );
+            }
+
+        }
+
+    }
 }
